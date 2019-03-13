@@ -10,10 +10,10 @@ import ReactGA from 'react-ga';
 
 export var city = 'London';
 export var country = 'GB'
-export const Api_Key = "8c5021109e1918aa1c478ce6b4f53c27";
+export const Api_Key = "REPLACEME";
 export var location = '';
 
-ReactGA.initialize('UA-136012452-1');
+ReactGA.initialize('REPLACEME');
 ReactGA.pageview(window.location.pathname + window.location.search);
 console.log(window.location.pathname + window.location.search)
 
