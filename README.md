@@ -1,3 +1,6 @@
+![Decorative Image](https://thisiswilf.com/assets/img/shitstorm.jpg)
+
+
 ## Shitstorm: a weather app with a bad attitude.
 
 Shitstorm gives you the weather and a thorough dressing-down at the same time. You can use it at [https://shitstorm.app](https://shitstorm.app).
