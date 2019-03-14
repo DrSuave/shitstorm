@@ -44,7 +44,7 @@ class WTF extends React.Component {
                     <h2>Locality issues?</h2>
                     <p>I don't want to drown you in nerd talk, but the system saves money by looking at what you search for, checking it against a list of towns you're allowed to search for, and then only calling the weather station if what you're searching for is going to come up with something that makes sense. I've put together a list of every town in the UK, which means you can only search for towns in the UK.</p>
                     <h2>But I live in Little Piddlinghoe on Muckmire, and I can't check the weather.</h2>
-                    <p>That's because Little Piddlinghoe on Muckmire is a tiny Hamlet lurking near an unmapped village, which is itself a day's panicked run from the nearest town. Search for the closest town instead.</p>
+                    <p>That's because Little Piddlinghoe on Muckmire is a tiny hamlet lurking near an unmapped village, which is itself a day's panicked run from the nearest town. Search for the closest town instead.</p>
                     <h2>It says it's raining outside, but I assure you it's not.</h2>
                     <p>Shitstorm gets all its info from <a href="https://openweathermap.org/">openweathermap.org</a>. Type your town into their engine and you should see the same result as you do on Shitstorm, just without all the swearing. If their info is wrong, they have a button that says "Wrong data?". Click that button and tell them all about it.</p>
                     <h2>It said the weather where I live is going to be grim five days in a row.</h2>

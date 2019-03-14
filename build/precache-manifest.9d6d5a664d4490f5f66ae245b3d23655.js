@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/showernight.712f9e02.jpg"
   },
   {
-    "revision": "626f1e0749d69674e67c",
+    "revision": "8ee48f2e7235a0819050",
     "url": "/static/css/main.b364cc87.chunk.css"
   },
   {
@@ -28,32 +28,28 @@ self.__precacheManifest = [
     "url": "/static/media/fewcloudnight.9dd02062.jpg"
   },
   {
-    "revision": "9913965a59d010739f07c14b7a3ea978",
-    "url": "/static/media/cloudnight.9913965a.jpg"
-  },
-  {
-    "revision": "af284c5ef7cef1bd8f1a9a4b259685c5",
-    "url": "/static/media/cloudday.af284c5e.jpg"
-  },
-  {
     "revision": "05bf55bf973b12c74c7d651462f60016",
     "url": "/static/media/brokencloudday.05bf55bf.jpg"
   },
   {
-    "revision": "2776c43b331757707281c649879f671d",
-    "url": "/static/media/showerday.2776c43b.jpg"
+    "revision": "9913965a59d010739f07c14b7a3ea978",
+    "url": "/static/media/cloudnight.9913965a.jpg"
   },
   {
     "revision": "d2df3f35ecf7f98ebe1c91fdcf2df404",
     "url": "/static/media/brokencloudnight.d2df3f35.jpg"
   },
   {
-    "revision": "626f1e0749d69674e67c",
-    "url": "/static/js/main.626f1e07.chunk.js"
+    "revision": "af284c5ef7cef1bd8f1a9a4b259685c5",
+    "url": "/static/media/cloudday.af284c5e.jpg"
   },
   {
-    "revision": "4231e9056a06523c76f48def0081b97f",
-    "url": "/static/media/rainday.4231e905.jpg"
+    "revision": "2776c43b331757707281c649879f671d",
+    "url": "/static/media/showerday.2776c43b.jpg"
+  },
+  {
+    "revision": "8ee48f2e7235a0819050",
+    "url": "/static/js/main.8ee48f2e.chunk.js"
   },
   {
     "revision": "5fbf97f68f142d78044629d7de3496ef",
@@ -62,6 +58,10 @@ self.__precacheManifest = [
   {
     "revision": "db7e1bad9a67d8741886a41063a2f726",
     "url": "/static/media/thunderday.db7e1bad.jpg"
+  },
+  {
+    "revision": "4231e9056a06523c76f48def0081b97f",
+    "url": "/static/media/rainday.4231e905.jpg"
   },
   {
     "revision": "beed6ae3951485d54e40dfd700f769bc",
@@ -92,7 +92,7 @@ self.__precacheManifest = [
     "url": "/static/media/rightarrow.c4fef3e8.svg"
   },
   {
-    "revision": "acac91e0ba07674397db5ba1c5722e52",
+    "revision": "a9277287e82ac04c9dc8b5cb66e312e6",
     "url": "/index.html"
   }
 ];

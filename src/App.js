@@ -10,22 +10,12 @@ import ReactGA from 'react-ga';
 
 export var city = 'London';
 export var country = 'GB'
-export const Api_Key = "REPLACEME";
+export const Api_Key = "REPLACE ME";
 export var location = '';
 
-ReactGA.initialize('REPLACEME');
+ReactGA.initialize('REPLACE ME');
 ReactGA.pageview(window.location.pathname + window.location.search);
 console.log(window.location.pathname + window.location.search)
-
-// function initializeReactGA() {
-//   ReactGA.initialize('UA-136012452-1');
-//   // ReactGA.initialize('UA-136012452-1', {
-//   //   debug: true
-//   // });
-//   ReactGA.pageview('/landingPage');
-//   console.log('GA')
-// }
-// initializeReactGA();
 
 //this is all stuff for Autosuggest
 function escapeRegexCharacters(str) {
@@ -376,13 +366,18 @@ class App extends React.Component {
     this.setState({
       response: response,
     })
-    //then we fire the onResponse function
-    this.onResponse();
-    // and for the benefit of getForecast, update the city and country variables with the values stored in state
-    city = this.state.city
-    country = this.state.country
-    //we then fire getForecast, which predicts the future for us
-    this.getForecast();
+    if (response.cod === "404") { //make sure the placename works
+      alert("Oh shit! You've found a bug in the system. I'm making a proper error reporting feature for stuff like this - but in the meantime could you email REPLACE ME to let me know which placename you searched for?")
+    }
+    else {
+      //then we fire the onResponse function
+      this.onResponse();
+      // and for the benefit of getForecast, update the city and country variables with the values stored in state
+      city = this.state.city
+      country = this.state.country
+      //we then fire getForecast, which predicts the future for us
+      this.getForecast();
+    }
   }
 
 

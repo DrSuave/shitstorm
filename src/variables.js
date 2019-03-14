@@ -3092,7 +3092,7 @@ export const cities = [
     ]
   },
   {
-    title: 'IT',
+    title: 'IT', // a few italian towns for testing
     cities: [
       {
         name: 'Scala',
