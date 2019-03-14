@@ -23,4 +23,4 @@ The weather forecast feature gets a bit samey. It's an unfortunate fact that in 
 
 ### Feedback and collaboration
 
-Both are welcome. My email address is wilf@thisiswilf.com. My personal website is [https://thisiswilf.com](https://thisiswilf.com) if you want to have a look at that too. I'd love to hear ideas on expanding the supported countries, or about any other projects you're interested in working on.
+Both are welcome. My email address is wilf@wilfhorsfall.com. My personal website is [https://thisiswilf.com](https://thisiswilf.com) if you want to have a look at that too. I'd love to hear ideas on expanding the supported countries, or about any other projects you're interested in working on.
