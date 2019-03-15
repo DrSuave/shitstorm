@@ -10,10 +10,10 @@ import ReactGA from 'react-ga';
 
 export var city = 'London';
 export var country = 'GB'
-export const Api_Key = "REPLACE ME";
+export const Api_Key = process.env.REACT_APP_API_KEY;
 export var location = '';
 
-ReactGA.initialize('REPLACE ME');
+ReactGA.initialize(process.env.REACT_APP_GA_TRACKING_ID);
 ReactGA.pageview(window.location.pathname + window.location.search);
 console.log(window.location.pathname + window.location.search)
 
@@ -367,7 +367,7 @@ class App extends React.Component {
       response: response,
     })
     if (response.cod === "404") { //make sure the placename works
-      alert("Oh shit! You've found a bug in the system. I'm making a proper error reporting feature for stuff like this - but in the meantime could you email REPLACE ME to let me know which placename you searched for?")
+      alert(`Oh shit! You've found a bug in the system. I'm making a proper error reporting feature for stuff like this - but in the meantime could you email ${process.env.REACT_APP_SUPPORT_EMAIL} to let me know which placename you searched for?`)
     }
     else {
       //then we fire the onResponse function
