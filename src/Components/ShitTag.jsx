@@ -1,10 +1,7 @@
 import React from 'react'
 
-
-class ShitTag extends React.Component {
-
+export default class ShitTag extends React.Component {
     render() {
-
         return (
             <div className="ShitTag">
                 Shitstorm <span className="version">beta</span> 
@@ -12,6 +9,3 @@ class ShitTag extends React.Component {
         )
     }
 }
-
-
-export default ShitTag

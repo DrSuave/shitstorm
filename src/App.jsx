@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Autosuggest from 'react-autosuggest';
 import {cities} from './variables.js';
-import Now from './Components/now';
-import WeatherRow from './Components/weatherrow';
-import ShitTag from './Components/shittag';
-import WTF from './Components/wtf';
+import Now from './Components/Now';
+import WeatherRow from './Components/WeatherRow';
+import ShitTag from './Components/ShitTag';
+import WTF from './Components/WTF';
 import ReactGA from 'react-ga';
-
 
 export var city = 'London';
 export var country = 'GB'

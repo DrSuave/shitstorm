@@ -1,9 +1,6 @@
 import React from 'react'
 
-
-
-
-class WTF extends React.Component {
+export default class WTF extends React.Component {
 
     constructor(props, context) { 
         super(props, context);
@@ -55,6 +52,3 @@ class WTF extends React.Component {
             </div>
     }
 }
-
-
-export default WTF

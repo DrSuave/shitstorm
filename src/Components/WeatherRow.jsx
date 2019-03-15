@@ -1,12 +1,8 @@
 import React from 'react'
-import Forecast from './forecast';
+import Forecast from './Forecast';
 
-
-
-class WeatherRow extends React.Component {
-
+export default class WeatherRow extends React.Component {
     render() {
-
         return (
             <React.Fragment>
                 <div className="scrollers">
@@ -21,6 +17,3 @@ class WeatherRow extends React.Component {
         )
     }
 }
-
-
-export default WeatherRow

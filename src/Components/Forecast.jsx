@@ -1,7 +1,6 @@
 import React from 'react'
 
-
-class Forecast extends React.Component {
+export default class Forecast extends React.Component {
 
     humanReadable = () => {
         var i = 0;
@@ -89,7 +88,5 @@ class Forecast extends React.Component {
             )
     }
 }
-
-export default Forecast
 
 
