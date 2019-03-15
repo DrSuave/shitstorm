@@ -27,11 +27,11 @@ class Forecast extends React.Component {
                         var hour = utcHour + "am"
                     }
                 }
-                //var dateStr = [day, hour].join(" "); 
+                //var dateStr = [day, hour].join(" ");
                 //this.props.currentForecast.list[i].dt = dateStr;
                 this.props.currentForecast.list[i].dt = day;
                 this.props.currentForecast.list[i].sys.pod = hour;
-                
+
                 //human readable temp
                 var humanTemp = Math.floor(item.main.temp);
                 humanTemp = humanTemp + '°'
@@ -51,37 +51,37 @@ class Forecast extends React.Component {
             this.humanReadable();
         }
     }
-    
+
 
    State = {
         0:0
     }
 
-  
+
 
     componentDidMount() {
         this.humanReadable();
     }
 
-    
+
     render() {
 
             return (
 
                 this.props.currentForecast.list.map(item => (
-                       
+
                     <div className="weatherTile" key={item.dt_txt} >
                         <p className="gravitas">{item.dt}</p>
                         <p className="gravitas">{item.sys.pod}</p>
-                        <p className="thick judgement">{item.weather[0].icon === '01d' ? "Fuckin' Lush" : item.weather[0].icon === '01n' ? 'STARFACE' : item.weather[0].icon === '02d' ? 'Decent' : item.weather[0].icon === '02n' ? 'Decent' : item.weather[0].icon === '03d' ? 'Could be shitter' : item.weather[0].icon === '03n' ? 'Could be shitter' : item.weather[0].icon === '04d' ? 'A bit bollocks' : item.weather[0].icon === '04n' ? 'normal' : item.weather[0].icon === '09d' ? 'shite': item.weather[0].icon === '09n' ? 'shite' : item.weather[0].icon === '10d' ? 'crap': item.weather[0].icon === '10n' ? 'crap' : item.weather[0].icon === '11d' ? 'Kapow!': item.weather[0].icon === '11n' ? 'Kapow!' : item.weather[0].icon === '13d' ? 'FUCKING SNOW!': item.weather[0].icon === '13n' ? 'FUCKING SNOW!' : 'FUCKING MIST'}</p>
+                        <p className="thick judgement">{item.weather[0].icon === '01d' ? "Fuckin' Lush" : item.weather[0].icon === '01n' ? 'STARFACE' : item.weather[0].icon === '02d' ? 'Decent' : item.weather[0].icon === '02n' ? 'Decent' : item.weather[0].icon === '03d' ? 'Could be shittier' : item.weather[0].icon === '03n' ? 'Could be shitter' : item.weather[0].icon === '04d' ? 'A bit bollocks' : item.weather[0].icon === '04n' ? 'normal' : item.weather[0].icon === '09d' ? 'shite': item.weather[0].icon === '09n' ? 'shite' : item.weather[0].icon === '10d' ? 'crap': item.weather[0].icon === '10n' ? 'crap' : item.weather[0].icon === '11d' ? 'Kapow!': item.weather[0].icon === '11n' ? 'Kapow!' : item.weather[0].icon === '13d' ? 'FUCKING SNOW!': item.weather[0].icon === '13n' ? 'FUCKING SNOW!' : 'FUCKING MIST'}</p>
                         <img src={"//openweathermap.org/img/w/" + item.weather[0].icon + ".png"} />
                         <p className="thick judgement">{item.main.temp}</p>
                         <p className="gravitas">{item.weather[0].description}</p>
-                        <img 
-                            className="windArrow" 
-                            src={require('../img/arrow.svg')} 
-                            style={{transform: `rotate(${item.wind.deg}deg)`, 
-                            width: `20px`}} 
+                        <img
+                            className="windArrow"
+                            src={require('../img/arrow.svg')}
+                            style={{transform: `rotate(${item.wind.deg}deg)`,
+                            width: `20px`}}
                         />
                         <p className="gravitas">{item.wind.speed}mph</p>
                     </div>
