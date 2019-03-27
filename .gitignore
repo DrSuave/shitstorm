@@ -1,0 +1,6 @@
+node_modules
+build
+.env
+.idea/
+.vscode/
+key.js

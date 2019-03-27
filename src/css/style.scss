@@ -1,0 +1,649 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900'); 
+
+$darkBack: rgb(20,20,20);
+$textShadow: 0px 0px 4px #000000;
+$lightTranBack: rgba(white, 0.25);
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+.wrapper {
+    background: rgba(0,0,0,0.4);
+}
+
+.gravitas {
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    margin-left: 0.4em;
+    font-size: 12px;
+}
+
+.day {
+    border-bottom: 1px solid rgba(white, 0.6);
+    margin-bottom: 7px;
+}
+
+body {
+    margin: 0px;
+    background-image: linear-gradient(90deg,#0F2027,#2C5364);
+    color: white;
+    text-shadow: $textShadow;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 21px;
+}
+
+input.react-autosuggest__input {
+    margin-top: 40px;
+    background: transparent;
+    border: white solid 3px;
+    height: 3em;
+    width: 80%;
+    border-radius: 3px;
+    padding-left: 0.5em;
+    color: white;
+    font-size: 20px;
+    padding-right: 0.5em;
+    text-align: center;
+    font-family: Poppins;
+    background: $lightTranBack;//rgba(255,255,255,0.5);
+    text-shadow: 0px 0px 4px #000000;
+    max-width: 520px;
+    &::placeholder {
+        color: white;
+        opacity: 1;
+    }
+    &:focus {
+        outline: none;
+        &::placeholder{
+            color: rgba(white,0.2);
+            text-shadow: none;
+        }
+    }
+}
+
+.react-autosuggest__suggestions-container--open {
+    background: $darkBack;
+    width: 85%;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0px 0px 5px 5px;
+    ul {
+        list-style-type: none;
+        padding: 0px;
+        padding-bottom: 20px;
+    }
+
+}
+
+.sunsetGraph {
+    height: 3px;
+    width: 80vw;
+    max-width: 400px;
+    background: rgba(white, 0.6);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+
+    .sun {
+        width: 16px;
+        height: 16px;
+        background: white;
+        border-radius: 50%;
+        margin-right: auto;
+        transition-timing-function: ease-out;
+
+    }
+}
+
+.sunsetCaption {
+    width: 80vw;
+    max-width: 400px;
+    display: flex;
+    margin: 0px;
+    div {
+        flex-grow: 1;
+    }
+    .SunriseTime {
+        text-align: left;
+    }
+    .sunsetDivider {
+        text-align: center;
+    }
+    .SunsetTime {
+        text-align: right;
+    }
+}
+
+.messages {
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+}
+
+.iconCircle {
+    border-radius: 50%;
+    padding: 1em;
+    background: $darkBack;
+    width: 3em;
+    height: 3em;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1em;
+}
+
+.scrollers {
+    display: inline-flex;
+    padding: 15px;
+    background: $lightTranBack;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px 5px 0px 0px;
+    .border {
+        width: 2px;
+        background-color: white;
+        border-radius: 1px;
+        height: 15px;
+        margin-right: 15px;
+        margin-left: 15px;
+        box-shadow: $textShadow;
+    }
+    img {
+        width: 7px;
+    }
+    .gravitas {
+        cursor: pointer;
+        font-size: 0.5em;
+    }
+    
+}
+
+.weatherRow {
+    margin-bottom: 17px;
+    padding-top: 17px;
+    display: inline-flex;
+    overflow-x: scroll;
+    width: 100vw;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+    background: $lightTranBack;
+    scroll-snap-type: x mandatory;
+
+}
+
+::-webkit-scrollbar {
+    width: 0px; 
+}
+
+
+.messages {
+    margin-bottom: 2em;
+}
+
+.weatherTile {
+    scroll-snap-align: start;
+    h1 {
+        font-size: 4.5em;
+        margin: -15px;
+        margin-top: -25px;
+    }
+    display: inline-block;
+    padding: 2em;
+    margin: 1em;
+    font-size: 0.8em;
+    min-width: 120px;
+    background: $darkBack;
+    &.white {
+        background: transparent;
+        text-shadow: $textShadow;
+        margin: 0px;
+    }
+    color: white;
+    border-radius: 5px;
+    text-shadow: none;
+    &.weatherRow{
+        box-shadow: 0px 0px 10px 0px rgba(255,255,255,0.25);
+    }
+    .windArrow {
+        filter: invert(100);
+        margin-top: 1.3em;
+    }
+
+}
+
+.tags {
+    position: fixed;
+    top: 0;
+    background: $darkBack;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px; 
+    font-size: 0.5em;
+}
+
+.ShitTag {
+    @extend .tags;
+    left: 0;
+    background: $darkBack;
+    border-radius: 0px 0px 5px 0px;
+}
+
+.WTF {
+    @extend .tags;
+    right: 0;
+    border-radius: 0px 0px 0px 5px;
+    cursor: pointer;
+}
+
+.WTFexpanded {
+    .WTFwords{
+        max-width: 800px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 5em;
+        @media (max-width: 420px) {
+            padding-left: 1em;
+        }
+        font-size: 0.8em;
+        text-align: left;
+        h1 {
+            text-decoration: underline;
+        }
+        h2 {
+            margin-top: 1.5em;
+        }
+        a {
+            color: white;
+        }
+
+    }
+    z-index: 10;
+    overflow-y: scroll;
+    background: $darkBack;
+    position: fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width: 100vw;
+    font-size: 0.8em;
+    .close {
+        font-weight: 900;
+        color: $darkBack;
+        background: white;
+        border-radius: 50%;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        width: 2em;
+        height: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-shadow: none;
+        cursor: pointer;
+    }
+}
+
+.version {
+    opacity: 0.5;
+}
+
+
+@media (max-width: 560px) {
+    .WTF {
+        border-radius: 0px;
+    }
+
+    .social {
+        //padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 26px;
+        padding-right: 5px;
+        padding-left: 5px; 
+        border-radius: 0px 0px 0px 5px;
+        position: fixed;
+        right: 46px;
+        top: 0px;
+        background: $darkBack;
+        img {
+            height: 17px;
+            width: 17px;
+            display: inline;
+            margin-left: 7px;
+            margin-right: 7px;
+        }
+    }
+}
+
+@media (min-width: 560px) {
+
+    .social {
+        border: 1px rgba(white, 0.175) solid;
+        border-right: 0px;
+        width: 20px;
+        padding: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px; 
+        border-radius: 5px 0px 0px 5px;
+        position: fixed;
+        right: 0px;
+        top: calc(50% - 54px);
+        background: $darkBack;
+        img {
+            max-width: 86%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        a:nth-child(2) {
+            img {
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+p {
+    margin: 0px;
+}
+
+.thick {
+    font-weight: 900;
+}
+
+.judgement {
+    letter-spacing: 0.2em;
+    margin-left: 0.2em;
+    text-transform: uppercase;
+}
+
+.Prompt {
+    display: none;
+}
+
+.downloadable{
+    padding-bottom: 70px;
+   
+    .Prompt {
+        border-radius: 3px 3px 0px 0px;
+        div {
+            text-align: left;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        .gravitas {
+            margin-left: 0px;
+            border-bottom: 1px solid white;
+        }
+        background: $darkBack;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        color: white;
+        height: 70px;
+        justify-content: center;
+        font-size: 12px;
+        border-top: 1px solid rgb(70,70,70);
+        cursor: pointer;
+        }
+}
+
+.iosPrompt {
+    border-radius: 3px 3px 0px 0px;
+    div {
+        //text-align: left;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .gravitas {
+        margin-left: 0px;
+        border-bottom: 1px solid white;
+        margin-bottom: 7px;
+    }
+    img {
+        max-height: 20px;
+        &:not(.downArrow) {
+            margin-bottom: -6px;
+        }
+    }
+    .downArrow {
+        //transform: rotate(-90deg);
+        // position: absolute;
+        // right: -10px; //calc(50vw - 10px);
+        // bottom: 0;
+        margin-bottom: -28px;
+    }
+    background: $darkBack;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 17px;
+    width: 90vw;
+    margin-right: 5vw;
+    margin-left: 5vw;
+    color: white;
+    height: 70px;
+    justify-content: center;
+    font-size: 12px;
+    border: 1px solid rgb(70,70,70);
+    border-radius: 3px;
+    padding-top: 18px;
+}
+
+.close {
+    position: absolute;
+    top: 8px;
+    right: 3px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.iosBuffer {
+    height: 110px;
+}
+
+.center {
+    text-align: center;
+}
+
+
+//backgrounds
+
+.weather01d {
+    background: url(../img/sun.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.weather01n {
+    background: url(../img/clearnight.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.weather02d {
+    background: url(../img/fewclouds.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.weather02n {
+    background: url(../img/fewcloudnight.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.weather03d {
+    background: url(../img/cloudday.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.weather03n {
+    background: url(../img/cloudnight.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.weather04d {
+    background: url(../img/brokencloudday.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.weather04n {
+    background: url(../img/brokencloudnight.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.weather09d {
+    background: url(../img/showerday.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.weather09n {
+    background: url(../img/showernight.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.weather10d {
+    background: url(../img/rainday.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.weather10n {
+    background: url(../img/rainnight.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.weather11d {
+    background: url(../img/thunderday.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.weather11n {
+    background: url(../img/thundernight.jpg) no-repeat center right fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.weather13d {
+    background: url(../img/snowday.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.weather13n {
+    background: url(../img/snownight.jpg) no-repeat center right fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.weather50d {
+    background: url(../img/mistday.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.weather50n {
+    background: url(../img/mistnight.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+  
+    position: relative;
+    margin: 100px auto;
+  }
+  
+  .double-bounce1, .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+  }
+  
+  .double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+  
+  @-webkit-keyframes sk-bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+  }
+  
+  @keyframes sk-bounce {
+    0%, 100% { 
+      transform: scale(0.0);
+      -webkit-transform: scale(0.0);
+    } 50% { 
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+    }
+  }
